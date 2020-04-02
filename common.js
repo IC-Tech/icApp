@@ -8,7 +8,7 @@
  */
 
 const Host = location.origin + '/'
-const __IC_DEV__ = JSON.parse(process.env.__IC_DEV__) == true
+const __IC_DEV__ = JSON.parse(process.env.__IC_DEV__ || "false") == true
 if(__IC_DEV__ && !window.__IC_DEV__) window.__IC_DEV__ = {}
 const ReloadError = (e, f) => (f ? f : alert)(e)
 const XHR = (url, call, op, data) => {
