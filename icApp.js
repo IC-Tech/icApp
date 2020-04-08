@@ -51,4 +51,4 @@ const icApp = {
 	ds: a => new icApp.e(Object.keys((a = {a,b: ''}).a).forEach(b=> a.b+=`[data-${b}="${a.a[b]}"]`) == 'a' ? 0 : a.b)
 }
 // eslint-disable-next-line no-undef
-;(a=> [window.ic == undefined ? window.ic = [] : 0, window.ic.icApp = icApp, setTimeout(a => [typeof ic.init == 'function' ? ic.init(icApp) : 0],1000)])()
+;(a=> [window.ic = window.ic || {}, window.ic.icApp = icApp, setTimeout(a => [typeof ic.init == 'function' ? ic.init(icApp) : 0],1000)])()
